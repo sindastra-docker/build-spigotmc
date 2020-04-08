@@ -1,6 +1,7 @@
 FROM sindastra/mc-env
 
-RUN adduser -h /build -SDHs /sbin/nologin builder
+RUN addgroup builder
+RUN adduser -G builder -h /build -SDHs /sbin/nologin builder
 
 COPY build.sh /build/build.sh
 
