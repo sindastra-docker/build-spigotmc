@@ -1,7 +1,9 @@
 FROM sindastra/mc-env
 
-WORKDIR /build
 COPY build.sh /build/build.sh
+
+WORKDIR /build
+
 RUN chmod +x build.sh
 
 CMD ./build.sh
