@@ -25,7 +25,7 @@ jobs:
     - name: Build SpigotMC LATEST
       run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }}
 
-  build-spigot-1.16.5:
+  build-spigot-1-16-5:
   
     runs-on: ubuntu-latest
     
@@ -33,7 +33,7 @@ jobs:
     - name: Build SpigotMC 1.16.5
       run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }} ./build.sh --rev 1.16.5
 
-  build-spigot-1.12.2:
+  build-spigot-1-12-2:
   
     runs-on: ubuntu-latest
     
@@ -41,7 +41,7 @@ jobs:
     - name: Build SpigotMC 1.12.2
       run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }} ./build.sh --rev 1.12.2
 
-  build-spigot-1.17:
+  build-spigot-1-17:
   
     runs-on: ubuntu-latest
     
