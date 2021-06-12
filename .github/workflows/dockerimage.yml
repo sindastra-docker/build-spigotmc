@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VERSION: dev-${{ github.sha }}
-      IMAGE: build-spigotmc:${{ VERSION }}
-      NAME: build-spigotmc-${{ VERSION }}
+      IMAGE: build-spigotmc:${{ jobs.build.env.VERSION }}
+      NAME: build-spigotmc-${{ jobs.build.env.VERSION }}
 
     steps:
     - uses: actions/checkout@v2
