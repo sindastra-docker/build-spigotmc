@@ -11,8 +11,13 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      DATE: $(date +%s)
 
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build hub --file hub/Dockerfile --tag build-spigotmc:dev-$(date +%s)
+      run: docker build hub --file hub/Dockerfile --tag build-spigotmc:dev-${{ env.DATE }}
+    
+    - name: Run container to build latest
+      run: docker run --name spigotmc-build-${{ env.DATE }} build-spigotmc:dev-${{ env.DATE }}
