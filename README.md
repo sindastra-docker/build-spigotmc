@@ -14,14 +14,14 @@ Note that the build process needs internet to run, as it will fetch the latest b
 Just wait for it to finish building. You will see an output something like this:
 ```
 Success! Everything completed successfully. Copying final .jar files now.
-Copying spigot-1.15.2-R0.1-SNAPSHOT.jar to /build/./spigot-1.15.2.jar
-  - Saved as ./spigot-1.15.2.jar
+Copying spigot-1.16.5-R0.1-SNAPSHOT.jar to /build/./spigot-1.16.5.jar
+  - Saved as ./spigot-1.16.5.jar
 ```
 You will then copy the spigot-*.jar from your Docker container to your host computer with:
 
-    docker cp spigotmc-build:/build/spigot-1.15.2.jar /opt
+    docker cp spigotmc-build:/build/spigot-1.16.5.jar /opt
 
-Where you will find the newly built jar on your host at /opt/spigot-1.15.2.jar and of course you will have to adjust the filename and target path based on your built version and desired destination.
+Where you will find the newly built jar on your host at /opt/spigot-1.16.5.jar and of course you will have to adjust the filename and target path based on your built version and desired destination.
 
 # Cleaning up and rebuilding
 
