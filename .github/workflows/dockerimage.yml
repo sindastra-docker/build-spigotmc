@@ -4,11 +4,30 @@ on: [push, pull_request]
 
 jobs:
 
-  build:
+  build-docker-image:
 
     runs-on: ubuntu-latest
+
+    env:
+      IMAGE: build-spigotmc:dev-${{ github.sha }}
 
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build hub --file hub/Dockerfile --tag build-spigotmc:dev-$(date +%s)
+      run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
+
+  build-spigot-1-16-5:
+
+    runs-on: ubuntu-latest
+    needs: build-docker-image
+
+    env:
+      IMAGE: build-spigotmc:dev-${{ github.sha }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
+
+    - name: Build SpigotMC 1.16.5
+      run: docker run ${{ env.IMAGE }} ./build.sh --rev 1.16.5
