@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM openjdk:16-alpine
 COPY build.sh /build/build.sh
 WORKDIR /build
 
