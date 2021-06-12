@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
 
-  build:
+  build-docker-image:
 
     runs-on: ubuntu-latest
     env:
@@ -15,6 +15,15 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
-    
-    - name: Run container to build latest
+
+    - name: Build SpigotMC LATEST
       run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }}
+
+    - name: Build SpigotMC 1.16.5
+      run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }} ./build.sh --rev 1.16.5
+
+    - name: Build SpigotMC 1.12.2
+      run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }} ./build.sh --rev 1.12.2
+
+    - name: Build SpigotMC 1.17
+      run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }} ./build.sh --rev 1.17
