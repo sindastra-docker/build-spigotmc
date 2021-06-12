@@ -11,9 +11,9 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      DATE: $(date +%s)
-      IMAGE: build-spigotmc:dev-${{ env.DATE }}
-      NAME: build-spigotmc-${{ env.DATE }}
+      VERSION: dev-${{ GITHUB_SHA }}
+      IMAGE: build-spigotmc:${{ env.VERSION }}
+      NAME: build-spigotmc-${{ env.VERSION }}
 
     steps:
     - uses: actions/checkout@v2
