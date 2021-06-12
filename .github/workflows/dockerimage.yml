@@ -10,7 +10,6 @@ jobs:
     
     env:
       IMAGE: build-spigotmc:dev-${{ github.sha }}
-      NAME: build-spigotmc-dev-${{ github.sha }}
 
     steps:
     - uses: actions/checkout@v2
@@ -24,7 +23,7 @@ jobs:
     
     steps:
     - name: Build SpigotMC LATEST
-      run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }}
+      run: docker run build-spigotmc:dev-${{ github.sha }}
 
   build-spigot-1-16-5:
   
@@ -33,7 +32,7 @@ jobs:
     
     steps:
     - name: Build SpigotMC 1.16.5
-      run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }} ./build.sh --rev 1.16.5
+      run: docker run build-spigotmc:dev-${{ github.sha }} ./build.sh --rev 1.16.5
 
   build-spigot-1-12-2:
   
@@ -42,7 +41,7 @@ jobs:
     
     steps:
     - name: Build SpigotMC 1.12.2
-      run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }} ./build.sh --rev 1.12.2
+      run: docker run build-spigotmc:dev-${{ github.sha }} ./build.sh --rev 1.12.2
 
   build-spigot-1-17:
   
@@ -51,4 +50,4 @@ jobs:
     
     steps:
     - name: Build SpigotMC 1.17
-      run: docker run --name ${{ env.NAME }} ${{ env.IMAGE }} ./build.sh --rev 1.17
+      run: docker run build-spigotmc:dev-${{ github.sha }} ./build.sh --rev 1.17
