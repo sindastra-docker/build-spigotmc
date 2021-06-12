@@ -8,7 +8,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      VERSION: dev-${{ GITHUB_SHA }}
+      VERSION: dev-${{ github.sha }}
       IMAGE: build-spigotmc:${{ env.VERSION }}
       NAME: build-spigotmc-${{ env.VERSION }}
 
