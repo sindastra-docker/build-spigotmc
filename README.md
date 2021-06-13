@@ -1,7 +1,7 @@
 # build-spigotmc
 🐳 Docker container to build SpigotMC
 
-### ⚠️ Use the Legacy branch for Spigot 1.11.2 - 1.15.2
+### ⚠️ Use the Legacy branch (:legacy Docker tag) for Spigot 1.11.2 - 1.15.2
 
 # Running it
 
