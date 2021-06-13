@@ -34,7 +34,7 @@ jobs:
     - name: Build the Docker image
       run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
 
-    - name: Build SpigotMC 1.16.5
+    - name: Build Spigot 1.16.5
       run: docker run ${{ env.IMAGE }} ./build.sh --rev 1.16.5
 
   build-spigot-1-15-2:
@@ -50,7 +50,7 @@ jobs:
     - name: Build the Docker image
       run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
 
-    - name: Build SpigotMC 1.16.5
+    - name: Build Spigot 1.15.2
       run: docker run ${{ env.IMAGE }} ./build.sh --rev 1.15.2
       
   build-spigot-1-14-4:
@@ -66,7 +66,7 @@ jobs:
     - name: Build the Docker image
       run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
 
-    - name: Build SpigotMC 1.16.5
+    - name: Build Spigot 1.14.4
       run: docker run ${{ env.IMAGE }} ./build.sh --rev 1.14.4
       
   build-spigot-1-13-2:
@@ -82,7 +82,7 @@ jobs:
     - name: Build the Docker image
       run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
 
-    - name: Build SpigotMC 1.16.5
+    - name: Build Spigot 1.13.2
       run: docker run ${{ env.IMAGE }} ./build.sh --rev 1.13.2
 
   build-spigot-1-12-2:
@@ -98,7 +98,7 @@ jobs:
     - name: Build the Docker image
       run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
 
-    - name: Build SpigotMC 1.12.2
+    - name: Build Spigot 1.12.2
       run: docker run ${{ env.IMAGE }} ./build.sh --rev 1.12.2
 
   build-spigot-1-11-2:
@@ -114,5 +114,5 @@ jobs:
     - name: Build the Docker image
       run: docker build hub --file hub/Dockerfile --tag ${{ env.IMAGE }}
 
-    - name: Build SpigotMC 1.12.2
+    - name: Build Spigot 1.11.2
       run: docker run ${{ env.IMAGE }} ./build.sh --rev 1.11.2
