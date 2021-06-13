@@ -4,6 +4,7 @@ on:
   push:
     paths-ignore:
       - '**.md'
+      - '.github/FUNDING.yml'
   pull_request:
 
 jobs:
