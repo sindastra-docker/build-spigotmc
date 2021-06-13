@@ -1,7 +1,11 @@
 # build-spigotmc (legacy branch, OpenJDK 8, tested for 1.11.2 - 1.16.5)
 🐳 Docker container to build SpigotMC
 
-### ⚠️ This branch supports 1.11.2 - 1.16.5 only
+### ✅ Use the main/master branch (:latest Docker tag) for Spigot 1.16.5
+
+### ⚠️ Use the legacy branch (:legacy Docker tag) for Spigot 1.11.2 - 1.16.5
+
+### ❌ Spigot pre-1.11 is not currently supported
 
 # Running it
 
