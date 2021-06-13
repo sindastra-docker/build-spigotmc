@@ -1,6 +1,8 @@
 # build-spigotmc
 Docker container to build SpigotMC
 
+### ⚠️ Use the Legacy branch for Spigot 1.11.2 - 1.15.2
+
 # Running it
 
 This will automatically run my build script, which will download the latest BuildTools.jar and then run it with 2GB of allocated RAM and other settings as per the official documentation.
