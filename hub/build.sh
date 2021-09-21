@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git config --global --unset core.autocrlf
 
